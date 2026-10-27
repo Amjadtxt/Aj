@@ -1,0 +1,92 @@
+/* ==========================================================================
+   layout.css — page containers, header, navigation, footer
+   ========================================================================== */
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Header ------------------------------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(36, 39, 43, 0.92);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 24px;
+  min-height: var(--header-height);
+  padding-block: 8px;
+}
+
+.brand img { height: 30px; width: auto; }
+
+.site-nav ul { display: flex; gap: clamp(16px, 3vw, 28px); }
+
+.site-nav a {
+  display: block;
+  padding-block: 6px;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-nav a:hover { color: var(--text); }
+.site-nav a[aria-current="page"] {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 520px) {
+  .site-header__bar { justify-content: center; padding-block: 10px 4px; }
+  .site-nav { width: 100%; }
+  .site-nav ul { justify-content: space-between; }
+}
+
+/* Page structure ---------------------------------------------------------- */
+.page { padding-block: clamp(40px, 8vw, 88px); }
+
+.section + .section { margin-top: clamp(56px, 9vw, 96px); }
+
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 20px;
+}
+
+.section__title { font-size: clamp(1.5rem, 3vw, 2rem); }
+.page-title { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+
+.lead { max-width: 62ch; margin-top: 18px; color: var(--muted); }
+.lead strong { color: var(--text); }
+
+/* Footer ------------------------------------------------------------------ */
+.site-footer { border-top: 1px solid var(--line); }
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 24px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.site-footer a { color: var(--accent-bright); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }

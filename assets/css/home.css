@@ -1,0 +1,79 @@
+/* ==========================================================================
+   home.css — dictionary-entry hero + selected work
+   ========================================================================== */
+
+.hero { padding-block: clamp(32px, 7vw, 72px) 0; }
+
+.entry { max-width: 780px; }
+
+/* Language switch for the entry */
+.entry__tools { display: flex; gap: 8px; margin-bottom: clamp(28px, 5vw, 48px); }
+
+.lang-btn {
+  padding: 4px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.lang-btn:hover { border-color: var(--line-accent); color: var(--text); }
+.lang-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+/* Headword, pronunciation, part of speech */
+.entry__word {
+  font-size: clamp(3.6rem, 15vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
+}
+
+.entry__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 16px;
+  margin-top: 18px;
+}
+.entry__phonetic { color: var(--accent-bright); }
+.entry__pos { color: var(--muted); font-style: italic; }
+
+/* Numbered senses — a real sequence, like a dictionary */
+.entry__senses {
+  display: grid;
+  gap: 14px;
+  max-width: 60ch;
+  margin-top: clamp(24px, 4vw, 40px);
+  counter-reset: sense;
+}
+
+.entry__sense {
+  display: grid;
+  grid-template-columns: 2ch 1fr;
+  gap: 0 14px;
+  color: var(--muted);
+  counter-increment: sense;
+}
+.entry__sense::before {
+  content: counter(sense);
+  color: var(--accent-bright);
+  font-weight: 700;
+}
+
+/* Arabic version of the entry: joined letters need zero tracking */
+.entry[lang="ar"] { margin-left: auto; font-family: var(--font-arabic); }
+.entry[lang="ar"] * { letter-spacing: 0; }
+.entry[lang="ar"] .entry__word { line-height: 1.3; }
+.entry[lang="ar"] .entry__sense { line-height: 1.9; }
+.entry[lang="ar"] .entry__phonetic { direction: ltr; unicode-bidi: isolate; }
+.entry[lang="ar"] .entry__pos { font-style: normal; }
+
+/* Selected work */
+.featured { padding-block: clamp(56px, 9vw, 104px) clamp(48px, 8vw, 88px); }

@@ -1,0 +1,133 @@
+/* ==========================================================================
+   components.css — buttons, tags, project entries, dialog, form
+   ========================================================================== */
+
+/* Buttons ----------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border: 1px solid var(--line-accent);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn:hover { border-color: var(--accent-bright); color: var(--accent-bright); }
+
+.btn--primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn--primary:hover { background: var(--accent-bright); border-color: var(--accent-bright); color: var(--accent-ink); }
+
+.btn--sm { padding: 7px 14px; font-size: 0.8rem; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+.text-link { color: var(--accent-bright); font-size: 0.88rem; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
+
+/* Tags -------------------------------------------------------------------- */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+/* Project entries --------------------------------------------------------- */
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  column-gap: clamp(24px, 4vw, 56px);
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 24px 28px;
+  border-top: 1px solid var(--line);
+}
+
+.work__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+
+.work__title { font-size: 1.35rem; }
+
+.work__link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.work__link:hover { color: var(--accent-bright); }
+
+.work__kind { color: var(--accent-bright); font-size: 0.85rem; font-style: italic; }
+
+.work__desc { max-width: 56ch; color: var(--muted); font-size: 0.92rem; }
+
+.work .tags { margin-top: auto; padding-top: 6px; }
+
+.empty { margin-top: 28px; color: var(--muted); font-size: 0.9rem; }
+
+/* Dialog (project details) ------------------------------------------------ */
+.dialog {
+  width: min(520px, calc(100% - 40px));
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line-accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+}
+.dialog::backdrop { background: rgba(10, 12, 14, 0.7); }
+
+.dialog__body { display: flex; flex-direction: column; gap: 12px; padding: 24px; }
+.dialog__title { font-size: 1.25rem; }
+.dialog__desc { color: var(--muted); font-size: 0.92rem; }
+.dialog__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
+
+/* Forms ------------------------------------------------------------------- */
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field__label { color: var(--muted); font-size: 0.82rem; }
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-deep);
+  font-size: 0.92rem;
+}
+.input::placeholder { color: #8b949e; }
+.input:focus { outline: none; border-color: var(--accent); }
+textarea.input { min-height: 140px; resize: vertical; }
+
+.status {
+  padding: 10px 14px;
+  border: 1px solid var(--line-accent);
+  border-radius: var(--radius);
+  color: var(--accent-bright);
+  font-size: 0.86rem;
+}
+.status[hidden] { display: none; }

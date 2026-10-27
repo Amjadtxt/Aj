@@ -1,0 +1,44 @@
+/* ==========================================================================
+   about.css — intro, quick facts, skills
+   ========================================================================== */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+}
+
+.about-intro .lead + .lead { margin-top: 14px; }
+
+.facts { display: grid; gap: 0; border-top: 1px solid var(--line-accent); }
+
+.facts__row {
+  display: grid;
+  grid-template-columns: 9ch 1fr;
+  gap: 4px 16px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.facts dt { color: var(--accent-bright); font-style: italic; }
+.facts dd { color: var(--text); }
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.skills__group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-accent);
+}
+.skills__title { font-size: 1.05rem; color: var(--accent-bright); }
+
+@media (max-width: 760px) {
+  .about-intro { grid-template-columns: 1fr; }
+}

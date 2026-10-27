@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Aj.</title>
+  <meta name="description" content="Selected work by Amjad: web design and full-stack projects.">
+  <meta name="theme-color" content="#24272b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="../" aria-label="Aj. home"><img src="../assets/img/logo.png" alt="" width="48" height="30"></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../portfolio/" aria-current="page">Portfolio</a></li>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page wrap">
+    <h1 class="page-title">Selected work</h1>
+    <p class="lead">Web design experiments and full-stack projects, from small interfaces to complete platforms.</p>
+
+    <div class="toolbar">
+      <div class="tabs" id="category-tabs" role="group" aria-label="Filter by category"></div>
+      <div>
+        <label class="sr-only" for="search">Search projects</label>
+        <input class="input search" type="search" id="search" placeholder="Search projects">
+      </div>
+    </div>
+
+    <p class="count" id="count" role="status" aria-live="polite"></p>
+    <ul class="works" id="project-list"></ul>
+    <p class="empty" id="empty" hidden>No projects match your search.</p>
+    <noscript><p class="empty">Turn on JavaScript to browse the projects.</p></noscript>
+  </main>
+
+  <dialog class="dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog__body">
+      <p class="work__kind" id="dialog-kind"></p>
+      <h2 class="dialog__title" id="dialog-title"></h2>
+      <p class="dialog__desc" id="dialog-desc"></p>
+      <ul class="tags" id="dialog-tags"></ul>
+      <form class="dialog__actions" method="dialog">
+        <button class="btn btn--sm" type="submit">Close</button>
+        <a class="btn btn--primary btn--sm" id="dialog-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Open link</a>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>&copy; Amjad</span>
+      <a href="https://github.com/Amjadtxt/Aj" target="_blank" rel="noopener noreferrer">github.com/Amjadtxt/Aj</a>
+    </div>
+  </footer>
+  <script src="../assets/js/data/projects.js" defer></script>
+  <script src="../assets/js/utils.js" defer></script>
+  <script src="../assets/js/portfolio.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   not-found.css — 404 page
+   ========================================================================== */
+
+.not-found { max-width: 640px; }
+
+.not-found__code {
+  font-size: clamp(4rem, 18vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.not-found__text { margin-top: 18px; color: var(--muted); }

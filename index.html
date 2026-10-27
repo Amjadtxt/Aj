@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aj. | Amjad</title>
+  <meta name="description" content="Aj. — personal space of Amjad, a developer focused on clean, minimal web design.">
+  <meta name="theme-color" content="#24272b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="./" aria-label="Aj. home"><img src="assets/img/logo.png" alt="" width="48" height="30"></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="portfolio/">Portfolio</a></li>
+          <li><a href="about/">About</a></li>
+          <li><a href="contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="headword">
+      <div class="entry__tools" role="group" aria-label="Language of this entry">
+        <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="true">English</button>
+        <button class="lang-btn" type="button" data-set-lang="ar" aria-pressed="false" lang="ar">العربية</button>
+      </div>
+
+      <article class="entry" id="entry" lang="en" dir="ltr">
+        <h1 class="entry__word" id="headword" data-en="Amjad" data-ar="أمجد">Amjad</h1>
+        <p class="entry__meta">
+          <span class="entry__phonetic">/ˈam.dʒad/</span>
+          <span class="entry__pos" data-en="noun" data-ar="اسم">noun</span>
+        </p>
+        <ol class="entry__senses">
+          <li class="entry__sense"><span data-en="A developer who builds clean, minimal, responsive interfaces for the web." data-ar="مطوّر ويب يبني واجهات نظيفة وبسيطة ومتجاوبة مع كل الشاشات.">A developer who builds clean, minimal, responsive interfaces for the web.</span></li>
+          <li class="entry__sense"><span data-en="Someone who loves learning languages, the programming kind and the spoken kind." data-ar="شخص يحب تعلّم اللغات، البرمجية منها والمنطوقة.">Someone who loves learning languages, the programming kind and the spoken kind.</span></li>
+          <li class="entry__sense"><span data-en="Currently open to web and full-stack projects." data-ar="متاح حاليًا لمشاريع الويب والـ Full-Stack.">Currently open to web and full-stack projects.</span></li>
+        </ol>
+      </article>
+
+      <div class="actions">
+        <a class="btn btn--primary" href="portfolio/">View portfolio</a>
+        <a class="btn" href="contact/">Contact me</a>
+      </div>
+    </section>
+
+    <section class="featured wrap section" aria-labelledby="featured-title">
+      <div class="section__head">
+        <h2 class="section__title" id="featured-title">Selected work</h2>
+        <a class="text-link" href="portfolio/">All projects</a>
+      </div>
+      <ul class="works" id="featured-works"></ul>
+      <noscript><p class="empty">Turn on JavaScript to see the projects, or open the <a class="text-link" href="portfolio/">portfolio page</a>.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>&copy; Amjad</span>
+      <a href="https://github.com/Amjadtxt/Aj" target="_blank" rel="noopener noreferrer">github.com/Amjadtxt/Aj</a>
+    </div>
+  </footer>
+  <script src="assets/js/data/projects.js" defer></script>
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/entry-lang.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>

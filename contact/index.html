@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Aj.</title>
+  <meta name="description" content="Get in touch with Amjad.">
+  <meta name="theme-color" content="#24272b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="../" aria-label="Aj. home"><img src="../assets/img/logo.png" alt="" width="48" height="30"></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../portfolio/">Portfolio</a></li>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../contact/" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page wrap">
+    <div class="contact-grid">
+      <section aria-labelledby="contact-title">
+        <h1 class="page-title" id="contact-title">Let's talk</h1>
+        <p class="lead">You can find me on social platforms or send a message with the form.</p>
+        <div class="socials">
+          <a class="social" href="https://facebook.com/amjadtxt" target="_blank" rel="noopener noreferrer"><span>Facebook</span><span class="social__handle">@amjadtxt</span></a>
+          <a class="social" href="https://instagram.com/amjadtxt" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="social__handle">@amjadtxt</span></a>
+          <a class="social" href="https://x.com/amjadtxt" target="_blank" rel="noopener noreferrer"><span>X / Twitter</span><span class="social__handle">@amjadtxt</span></a>
+        </div>
+      </section>
+
+      <form class="form" id="contact-form" aria-label="Send a message">
+        <div class="field">
+          <label class="field__label" for="contact-name">Name</label>
+          <input class="input" type="text" id="contact-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="contact-email">Email</label>
+          <input class="input" type="email" id="contact-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="contact-message">Message</label>
+          <textarea class="input" id="contact-message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit" style="align-self: flex-start;">Send message</button>
+        <p class="status" id="contact-status" role="status" hidden></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>&copy; Amjad</span>
+      <a href="https://github.com/Amjadtxt/Aj" target="_blank" rel="noopener noreferrer">github.com/Amjadtxt/Aj</a>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js" defer></script>
+  <script src="../assets/js/contact.js" defer></script>
+</body>
+</html>
